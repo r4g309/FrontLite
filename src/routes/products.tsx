@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { CompanyType } from "../../types";
+import { NavBar } from "../components/navbar/navbar";
 import { useRedirectIfAuthenticated } from "../hooks/useRedirect";
 import { BASE_URL } from "../utils/constants";
 import { getToken } from "../utils/token";
@@ -98,6 +99,7 @@ export const Products = () => {
   };
   return (
     <>
+      <NavBar />
       <form onSubmit={sendData}>
         <fieldset>
           <legend>Register Product</legend>

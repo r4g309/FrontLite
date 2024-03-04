@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { NavBar } from "../components/navbar/navbar";
 import { useRedirectIfAuthenticated } from "../hooks/useRedirect";
 import { BASE_URL } from "../utils/constants";
 import "./inventory.css";
@@ -17,6 +18,7 @@ export const Inventory = () => {
   };
   return (
     <>
+      <NavBar />
       <h1>Inventory</h1>
       <form onSubmit={sendEmailFileRequest}>
         <fieldset>

@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { NavBar } from "../components/navbar/navbar";
 import { useRedirectIfAuthenticated } from "../hooks/useRedirect";
 import { BASE_URL } from "../utils/constants";
 import { getToken } from "../utils/token";
@@ -49,6 +50,7 @@ export const RegisterCompany = () => {
 
   return (
     <>
+      <NavBar />
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Register Company</legend>

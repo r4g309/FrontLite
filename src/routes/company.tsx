@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CompanyType } from "../../types";
 import { CompanyCard } from "../components/company/Card";
+import { NavBar } from "../components/navbar/navbar";
 import { useRedirectIfAuthenticated } from "../hooks/useRedirect";
 import { BASE_URL } from "../utils/constants";
 import "./company.css";
@@ -28,15 +29,14 @@ export const Company = () => {
 
   return (
     <>
-      {company?.length === 0 ? (
-        () => <h1>Empty</h1>
-      ) : (
-        <div className="container">
-          {company?.map((c: CompanyType) => (
-            <CompanyCard key={c.nit} {...c} />
-          ))}
-        </div>
-      )}
+      <NavBar />
+      <div className="container">
+        {company?.length === 0 ? (
+          <h1>Empty</h1>
+        ) : (
+          company?.map((c: CompanyType) => <CompanyCard key={c.nit} {...c} />)
+        )}
+      </div>
     </>
   );
 };
