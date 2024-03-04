@@ -1,0 +1,14 @@
+.send-email {
+    width: 100%;
+}
+
+.download {
+    width: 300px;
+    margin-inline: auto;
+    display: block;
+}
+
+.download a {
+    text-decoration: none;
+    color: white;
+}
